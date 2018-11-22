@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StateButton">
+        <!--圆角半径-->
+        <attr name="corner_radius" format="dimension" />
+        <!--边框颜色-->
+        <attr name="border_color" format="color" />
+        <!--边框宽度-->
+        <attr name="border_stroke" format="dimension" />
+        <!--不可用时的颜色-->
+        <attr name="unable_color" format="color" />
+        <attr name="iconPadding" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="SmartToolbar">
+        <!-- 标题栏背景 图片或颜色 -->
+        <attr name="titleBarColor" format="color" />
+        <!-- 标题栏高度 -->
+        <attr name="titleBarHeight" format="dimension" />
+        <!-- 是否显示返回键 -->
+        <attr name="showNavigation" format="boolean" />
+        <!-- Center标题 -->
+        <attr name="centerTitleText" format="string" />
+        <!-- Center标题颜色 -->
+        <attr name="centerTitleColor" format="color" />
+        <!-- Center标题字体大小-->
+        <attr name="centerTitleSize" format="dimension" />
+        <!-- Center标题字体-->
+        <attr name="centerTitleType">
+            <enum name="NORMAL" value="0" />
+            <enum name="BOLD" value="1" />
+        </attr>
+        <!--navigation返回键自定义图标-->
+        <attr name="navigationIcon" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MultiStateView">
+        <attr name="msv_loadingView" format="reference" />
+        <attr name="msv_emptyView" format="reference" />
+        <attr name="msv_errorView" format="reference" />
+        <attr name="msv_viewState" format="enum">
+            <enum name="content" value="0" />
+            <enum name="error" value="1" />
+            <enum name="empty" value="2" />
+            <enum name="loading" value="3" />
+        </attr>
+        <attr name="msv_animateViewChanges" format="boolean" />
+    </declare-styleable>
+
+    <!--自定义的FlowLayout-->
+    <declare-styleable name="FlowLayout">
+        <attr name="verticalSpacing" />
+        <attr name="horizontalSpacing" />
+    </declare-styleable>
+
+    <!--密码编辑框-->
+    <declare-styleable name="PasswordEditText">
+        <attr name="pet_iconShow" format="integer"/>
+        <attr name="pet_iconHide" format="integer"/>
+    </declare-styleable>
+</resources>

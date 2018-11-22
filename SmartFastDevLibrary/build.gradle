@@ -1,0 +1,130 @@
+apply plugin: 'com.android.library'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9'
+    }
+}
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 80
+        versionName "1.9.8.001"
+
+        // Enabling multidex support.
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    lintOptions {
+        abortOnError false
+        disable 'MissingTranslation'/*resolve BUILD APK when ocour  translationg error*/
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // Support库
+    api rootProject.ext.supportLibs
+    // Glide
+    api rootProject.ext.glideLib
+    // butterknife
+    api rootProject.ext.butterknife
+    // swipebacklayoutLib
+    api rootProject.ext.swipebacklayoutLib
+    // circleimageviewVersion
+    api rootProject.ext.circleimageview
+    // orhanobutLogger
+    api rootProject.ext.orhanobutLogger
+    //导航栏红点消息数
+    api rootProject.ext.badgeViewDotViewLibs
+    // rxLifecycleLibs
+    api rootProject.ext.rxLifecycleLibs
+    // APT dependencies(注解处理器)
+    annotationProcessor rootProject.ext.annotationProcessorLibs
+    // javaEmail
+    api rootProject.ext.javaEmail
+
+
+    api 'com.carozhu:RxHttpLibrary:1.2.6.8'
+    api 'com.google.code.gson:gson:2.8.5'
+
+    //rxpermissions
+    api 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+    // AndroidUtilCodeLib
+    //api rootProject.ext.androidUtilCodeLib
+
+    // Google material
+    //api 'com.google.android.material:material:1.0.0'
+    //api 'androidx.core:core-ktx:1.0.0'
+}
+
+
+//生成源文件
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+//生成Javadoc文档
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+//文档打包成jar
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+//拷贝javadoc文件
+task copyDoc(type: Copy) {
+    from "${buildDir}/docs/"
+    into "docs"
+}
+//上传到JCenter所需要的源码文件
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+//解决 JavaDoc 中文注释生成失败的问题
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
+
+
+//https://github.com/novoda/bintray-release 解决了Library中依赖第三方库aar时引用不到的问题
+apply plugin: 'com.novoda.bintray-release' // must be applied after your artifact generating plugin (eg. java / com.android.library)
+publish {
+    userOrg = 'carozhu'
+    groupId = 'com.carozhu'
+    artifactId = 'SmartFastDevLibrary'
+    publishVersion = '1.9.8.001'
+    desc = 'SmartFastDevLibrary for basic typical android'
+    website = 'https://github.com/carozhu/SmartFastDevLibrary'
+}

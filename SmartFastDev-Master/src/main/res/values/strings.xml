@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SmartFastDev-Master</string>
+    <string name="app_names">{
+    "Header": {
+        "Result": 100,
+        "Msg": "查询成功"
+    },
+    "Content": {
+        "data": "XU1Qh/0O13dG8T9bxazX1ilEItUQ2Z7mJODAodxTSIQ="
+    }
+}</string>
+
+    <string name="app_namesss">{
+    "Header": {
+        "Result": 100,
+        "Msg": "查询成功"
+    }
+}</string>
+</resources>

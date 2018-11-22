@@ -1,0 +1,3 @@
+FastDevLibrary
+1：Android 禁用横屏的方法 -- 说明 https://www.jianshu.com/p/305af0fa7adf
+2：implementation 'jp.wasabeef:glide-transformations:3.3.0'  --- GLide显示圆角
