@@ -6,6 +6,10 @@ import android.support.multidex.MultiDex;
 
 import com.carozhu.fastdev.ContextHolder;
 import com.carozhu.fastdev.receiver.NetWorkStateReceiver;
+import com.liulishuo.filedownloader.FileDownloader;
+import com.liulishuo.filedownloader.connection.FileDownloadUrlConnection;
+import com.tencent.mmkv.MMKV;
+
 public class BaseApplication extends Application {
     private static Application context;
     private static BaseApplication mInst;
@@ -17,6 +21,19 @@ public class BaseApplication extends Application {
         mInst = this;
         ContextHolder.initial(this);
         NetWorkStateReceiver.getInstance().init(this,false);
+
+        //Init MMKV
+        String rootDir = MMKV.initialize(this);
+        System.out.println("mmkv root: " + rootDir);
+
+        //初始化FileDownloader配置
+        FileDownloader.setupOnApplicationOnCreate(this)
+                .connectionCreator(new FileDownloadUrlConnection
+                        .Creator(new FileDownloadUrlConnection.Configuration()
+                        .connectTimeout(15_000)
+                        .readTimeout(15_000)
+                ))
+                .commit();
 
     }
 

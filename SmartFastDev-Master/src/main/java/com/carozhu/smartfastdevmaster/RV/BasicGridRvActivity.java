@@ -10,7 +10,6 @@ import android.support.v7.widget.RecyclerView;
 import com.carozhu.fastdev.base.BaseActivity;
 import com.carozhu.fastdev.helper.StatusBarHelper;
 import com.carozhu.fastdev.mvp.BasePresenter;
-import com.carozhu.fastdev.mvp.IPresenter;
 import com.carozhu.smartfastdevmaster.R;
 import com.sunfusheng.progress.GlideApp;
 
@@ -83,47 +82,47 @@ public class BasicGridRvActivity extends BaseActivity {
 
     private List<String> loadData() {
         List<String> imageArrayList = new ArrayList<>();
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/5a0d0b3349790.jpg?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/1531972764189.jpg?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/11718571528898755402.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/10887011516900268162.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/5a0d0b3349790.jpg?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/1531972764189.jpg?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/13895781528899672091.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/5a0d0b3349790.jpg?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/1531972764189.jpg?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/11718571528898755402.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/10887011516900268162.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/5a0d0b3349790.jpg?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/1531972764189.jpg?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/13895781528899672091.png?x-oss-process=style/sty1");
 
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/12020571529634350512.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/10439411523686142111.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/12962521531310151431.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/12638721528055492461.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/1532328597543.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/15647041532331906181.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/14046821528635916584.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/12020571529634350512.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/10439411523686142111.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/12962521531310151431.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/12638721528055492461.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/1532328597543.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/15647041532331906181.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/14046821528635916584.png?x-oss-process=style/sty1");
 
 
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/15003401531150831132.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/10960761518490475313.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/13747451532417298350.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/14991611530885026461.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/11327121518932424048.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/15003401531150831132.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/10960761518490475313.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/13747451532417298350.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/14991611530885026461.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/11327121518932424048.png?x-oss-process=style/sty1");
 
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/12878591526215066618.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/15332731532063750393.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/1517301951526.jpg?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/5a0d343c2c5d9.jpg?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/1532266714446.jpg?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/10887011516900268162.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/12878591526215066618.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/15332731532063750393.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/1517301951526.jpg?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/5a0d343c2c5d9.jpg?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/1532266714446.jpg?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/10887011516900268162.png?x-oss-process=style/sty1");
 
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/11718571528898755402.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/15173024001833.jpg?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/13667241527902547315.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/14129011528852363722.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/5a226d5802cb7.jpg?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/11718571528898755402.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/15173024001833.jpg?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/13667241527902547315.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/14129011528852363722.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/5a226d5802cb7.jpg?x-oss-process=style/sty1");
 
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/15607551532246866499.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/1527559645906.jpg?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/14017111531748951645.png?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/1517303233966.jpg?x-oss-process=style/sty1");
-        imageArrayList.add("http://vs-m.zsyj.com.cn/img/153230905255.jpg?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/15607551532246866499.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/1527559645906.jpg?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/14017111531748951645.png?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/1517303233966.jpg?x-oss-process=style/sty1");
+        imageArrayList.add("http://vs-m.fadi.com.cn/img/153230905255.jpg?x-oss-process=style/sty1");
 
 
         imageArrayList.add("http://e.hiphotos.baidu.com/image/pic/item/a1ec08fa513d2697e542494057fbb2fb4316d81e.jpg");

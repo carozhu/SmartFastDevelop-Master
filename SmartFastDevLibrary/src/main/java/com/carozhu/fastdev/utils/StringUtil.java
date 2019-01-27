@@ -883,5 +883,7 @@ public class StringUtil {
         return sb.toString();
     }
 
-
+    public static boolean containsAny(String str, String searchChars) {
+        return str.contains(searchChars);
+    }
 }

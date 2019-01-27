@@ -5,10 +5,11 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.CoordinatorLayout;
@@ -16,16 +17,16 @@ import android.support.v4.app.FragmentManager;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
+
 import android.view.WindowManager;
 
+import com.carozhu.fastdev.dialog.LoadingDialog;
+import com.carozhu.fastdev.helper.DisplayHelper;
 import com.carozhu.fastdev.helper.WeakHandler;
 import com.carozhu.fastdev.mvp.BasePresenter;
 import com.carozhu.fastdev.mvp.IContractView;
 import com.carozhu.fastdev.receiver.NetChangeObser;
 import com.carozhu.rxhttp.rx.RxBus;
-import com.trello.rxlifecycle2.android.ActivityEvent;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -37,19 +38,19 @@ import io.reactivex.schedulers.Schedulers;
  * Date  : On 2018/10/18
  * Desc  : 全屏且设置背景为透明的BottomSheetDialogFragment
  * 参考  : https://blog.csdn.net/klxh2009/article/details/80393245
- *
+ * <p>
  * 注意：
  * 一：BottomSheetDialogFragment的生命周期执行顺序：show-->onCreateDialog-->onCreateView
- *
- *
  */
-public abstract class BaseFullScreenBottomSheetDialogFragment<P extends BasePresenter, V extends IContractView> extends BottomSheetDialogFragment implements IDialog <P>{
+@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+@SuppressLint("RestrictedApi")
+public abstract class BaseFullScreenBottomSheetDialogFragment<P extends BasePresenter, V extends IContractView> extends BottomSheetDialogFragment implements IBaseDialog<P>, IContractView {
     private String TAG = BaseFullScreenBottomSheetDialogFragment.class.getSimpleName();
     protected CompositeDisposable mCompositeDisposable;
     protected P mPresenter;//如果当前页面逻辑简单, Presenter 可以为 null
     public Context context;
     public Activity activity;
-    @SuppressLint("RestrictedApi")
+
     @Override
     public void setupDialog(Dialog dialog, int style) {
         super.setupDialog(dialog, style);
@@ -64,15 +65,17 @@ public abstract class BaseFullScreenBottomSheetDialogFragment<P extends BasePres
         parent.setFitsSystemWindows(true);
         BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(parent);
         inflatedView.measure(0, 0);
+
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         int screenHeight = displaymetrics.heightPixels;//包含上下导航栏高度
-        //WindowManager wm = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
-        //int screenHeight = wm.getDefaultDisplay().getHeight();
+        //减去底部导航栏高度
+        screenHeight = screenHeight - DisplayHelper.getNavMenuHeight(getContext());
+
         bottomSheetBehavior.setPeekHeight(screenHeight);
 
         if (params.getBehavior() instanceof BottomSheetBehavior) {
-            ((BottomSheetBehavior)params.getBehavior()).setBottomSheetCallback(mBottomSheetBehaviorCallback);
+            ((BottomSheetBehavior) params.getBehavior()).setBottomSheetCallback(mBottomSheetBehaviorCallback);
         }
 
         params.height = screenHeight;
@@ -82,15 +85,15 @@ public abstract class BaseFullScreenBottomSheetDialogFragment<P extends BasePres
         context = getContext();
         activity = getActivity();
         mPresenter = initPresenter();
-        initView(inflatedView,dialog);
+        initView(inflatedView, dialog);
         subscribeRxbusEvent();
         render();
 
         //Debug
-        if (context == null){
+        if (context == null) {
             Log.d(TAG, "in setupDialog context == null");
         }
-        if (activity == null){
+        if (activity == null) {
             Log.d(TAG, "in setupDialog activity == null");
         }
     }
@@ -110,6 +113,26 @@ public abstract class BaseFullScreenBottomSheetDialogFragment<P extends BasePres
         Log.d(TAG, "onCreateDialog");
         return super.onCreateDialog(savedInstanceState);
     }
+
+    LoadingDialog loadingDialog;
+
+    @Override
+    public void showLoading(String loadingTips) {
+        dismissLoading();
+        loadingDialog = new LoadingDialog.Builder(context)
+                .setTips(loadingTips)
+                .create();
+        loadingDialog.show();
+    }
+
+    @Override
+    public void dismissLoading() {
+        if (loadingDialog != null && loadingDialog.isShowing()) {
+            loadingDialog.dismiss();
+            loadingDialog = null;
+        }
+    }
+
 
     /**
      * For status Debug
@@ -139,6 +162,7 @@ public abstract class BaseFullScreenBottomSheetDialogFragment<P extends BasePres
             }
 
         }
+
         @Override
         public void onSlide(@NonNull View bottomSheet, float slideOffset) {
             //Log.d(TAG, "sliding " + slideOffset);

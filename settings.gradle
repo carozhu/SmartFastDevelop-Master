@@ -1,2 +1,40 @@
 include ':SmartFastDev-Master'
 include ':SmartFastDevLibrary'
+
+//个人页滑动布局效果
+//include ':ScrollingRecycler-Demo'
+//include ':CoordinatorLayoutExample-master'
+//include ':CoordinatorBehavior-master'
+//include ':CoordinatorBehaviorExample'
+//include ':JDFinanceIndex'
+//include ':OverlapToorbarTabs-master'
+//include ':CoolCoordinatorLayout-master'
+//include ':AmazingAvatar-master'
+//include ':CoordinatorBehaviorExample-maste'
+//include ':CustomBottoBar-master'
+
+//Tab
+//include ':FlycoTabLayout_master'
+//include ':FlycoTabLayout_Lib'
+
+//Animate views easily by chaining animations, run them serially or in parallel.
+//include ':Choreographer'
+//include ':Choreographer-master'
+
+//Toast
+//include ':LoadToast-master'
+//include ':LoadToast-Library'
+
+//swipe layout menu
+//include ':MultiActionSwipeHelper-master'
+//include ':SwipeMenuRecyclerView-library'
+//include ':SwipeMenuRecyclerView-Master'
+//include ':AndroidSwipeLayout-library'
+//include ':AndroidSwipeLayout-master'
+
+//AccessibilityService
+//include ':AccessibilityServiceMonitor'
+
+//include ':fluid-slider-example-simple', ':fluid-slider', ':fluid-slider-example-simple-java'
+
+include ':LabProgress-master','LabProgress'

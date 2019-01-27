@@ -4,9 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.IntRange;
@@ -16,7 +17,8 @@ import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.carozhu.fastdev.dialog.SmileLoadingDialog;
+import android.view.WindowManager;
+import com.carozhu.fastdev.dialog.LoadingDialog;
 import com.carozhu.fastdev.helper.ActivityManageHelper;
 import com.carozhu.fastdev.helper.StatusBarHelper;
 import com.carozhu.fastdev.helper.WeakHandler;
@@ -48,7 +50,7 @@ import me.imid.swipebacklayout.lib.app.SwipeBackActivityHelper;
  * 1：删除所有消息和回调 handler.removeCallbacksAndMessages(null);
  * 2：删除在消息队列中的任何待处理的Runnable handler.removeCallbacks(runnableRunner);
  */
-public abstract class BaseActivity<P extends BasePresenter, V extends IContractView> extends RxAppCompatActivity implements ActivityLifecycleable , SwipeBackActivityBase,IActivity <P>{
+public abstract class BaseActivity<P extends BasePresenter, V extends IContractView> extends RxAppCompatActivity implements ActivityLifecycleable, SwipeBackActivityBase, IBaseActivity<P> ,IContractView{
     // 右滑返回
     private SwipeBackLayout mSwipeBackLayout;
     private SwipeBackActivityHelper mHelper;
@@ -58,11 +60,11 @@ public abstract class BaseActivity<P extends BasePresenter, V extends IContractV
     protected CompositeDisposable mCompositeDisposable;
     private final BehaviorSubject<ActivityEvent> mLifecycleSubject = BehaviorSubject.create();
 
-    //@Inject
-    //@Nullable
     protected P mPresenter;//如果当前页面逻辑简单, Presenter 可以为 null
 
-    private SmileLoadingDialog smileLoadingDialog = null;
+    private LoadingDialog loadingDialog = null;
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -92,19 +94,17 @@ public abstract class BaseActivity<P extends BasePresenter, V extends IContractV
     }
 
     /**
-     *
      * @param swipeBack
      */
-    public void swipeBack(boolean swipeBack){
+    public void swipeBack(boolean swipeBack) {
         setSwipeBackEnable(swipeBack);
     }
 
     /**
-     *
      * @param swipeBack
      * @param edgeFlags 设置滑动方向，可设置EDGE_LEFT, EDGE_RIGHT, EDGE_ALL, EDGE_BOTTOM
      */
-    public void swipeBack(boolean swipeBack,int edgeFlags){
+    public void swipeBack(boolean swipeBack, int edgeFlags) {
         mSwipeBackLayout.setEdgeTrackingEnabled(edgeFlags);
         setSwipeBackEnable(swipeBack);
     }
@@ -127,7 +127,6 @@ public abstract class BaseActivity<P extends BasePresenter, V extends IContractV
     }
 
 
-
     @NonNull
     @Override
     public final Subject<ActivityEvent> provideLifecycleSubject() {
@@ -138,10 +137,9 @@ public abstract class BaseActivity<P extends BasePresenter, V extends IContractV
      * 默认禁用横屏。
      * 不需要时，请不要super
      */
-    protected void beforeSetContent(){
+    protected void beforeSetContent() {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
-
 
 
     @Override
@@ -185,7 +183,7 @@ public abstract class BaseActivity<P extends BasePresenter, V extends IContractV
             this.mPresenter = null;
         }
         //移除消息队列中所有消息和所有的Runnable
-        if (weakHandler!=null) {
+        if (weakHandler != null) {
             weakHandler.removeCallbacksAndMessages(null);
             weakHandler = null;
         }
@@ -195,17 +193,6 @@ public abstract class BaseActivity<P extends BasePresenter, V extends IContractV
     @Override
     public void onBackPressed() {
         onSwitchBackPressed();
-    }
-
-    /**
-     * 设置状态栏颜色
-     * @param statuBarColor 状态栏颜色
-     * @param statusBarAlpha 状态栏颜色透明度
-     * @param useDart 图标文字是否使用深色调
-     */
-    protected void setStatuBarStyle(@ColorRes int statuBarColor,@IntRange(from = 0, to = 255) int statusBarAlpha,boolean useDart) {
-        StatusBarHelper.setColor(this, ContextCompat.getColor(this, statuBarColor), statusBarAlpha);
-        StatusBarHelper.setStatusTextColor(useDart, this);
     }
 
 
@@ -296,6 +283,88 @@ public abstract class BaseActivity<P extends BasePresenter, V extends IContractV
     }
 
     /**
+     * root view
+     *
+     * @return
+     */
+    public View getRootView() {
+        return activity.getWindow().getDecorView().findViewById(android.R.id.content);
+    }
+
+
+    // ------------   Dialog start ----------------
+
+    /**
+     * 显示正在Loading Dialog
+     *
+     * @param loadingTips
+     */
+    @Override
+    public void showLoading(String loadingTips) {
+        loadingDialog = new LoadingDialog.Builder(context)
+                .setTips(loadingTips)
+                .create();
+        loadingDialog.show();
+    }
+
+    /**
+     * dis SmileLoading Dialog
+     */
+    @Override
+    public void dismissLoading() {
+        if (loadingDialog != null) {
+            loadingDialog.dismiss();
+            loadingDialog = null;
+        }
+    }
+
+    /**
+     * @param statuTips
+     */
+    public void showStatuTips(String statuTips) {
+        if (loadingDialog != null && !TextUtils.isEmpty(statuTips)) {
+            loadingDialog.setStatuTip(statuTips);
+        }
+    }
+
+    /**
+     * @return
+     */
+    public LoadingDialog getLoadingDialog() {
+        if (loadingDialog == null) {
+            throw new RuntimeException("you yet show smileLoading Dialog ! ");
+        }
+        return loadingDialog;
+    }
+    // ------------   Dialog end  ----------------
+
+
+    // ------------ 状态栏 start ------------------------
+    public void setTransparentForWindow(Activity activity) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
+    }
+
+    /**
+     * 设置状态栏颜色
+     *
+     * @param statuBarColor  状态栏颜色
+     * @param statusBarAlpha 状态栏颜色透明度
+     * @param useDart        图标文字是否使用深色调
+     */
+    protected void setStatuBarStyle(@ColorRes int statuBarColor, @IntRange(from = 0, to = 255) int statusBarAlpha, boolean useDart) {
+        StatusBarHelper.setColor(this, ContextCompat.getColor(this, statuBarColor), statusBarAlpha);
+        StatusBarHelper.setStatusTextColor(useDart, this);
+    }
+    // ---------- 状态栏 end ----------------------------
+
+
+    // ---------- 跳转 start ----------------------------
+
+    /**
      * just jump a sample activity
      *
      * @param context
@@ -317,56 +386,7 @@ public abstract class BaseActivity<P extends BasePresenter, V extends IContractV
         }
         mContext.startActivity(intent);
     }
+    // ---------- 跳转 end ----------------------------
 
-    /**
-     * root view
-     *
-     * @return
-     */
-    public View getRootView() {
-        return activity.getWindow().getDecorView().findViewById(android.R.id.content);
-    }
-
-
-    /**
-     * 显示正在Loading Dialog
-     * @param loadingTips
-     */
-    public void showSmileLoading(String loadingTips){
-         smileLoadingDialog = SmileLoadingDialog.show(context, loadingTips);
-    }
-
-    /**
-     * dis SmileLoading Dialog
-     */
-    public void disSmileLoading(){
-        if (smileLoadingDialog!=null){
-            smileLoadingDialog.dismiss();
-            smileLoadingDialog = null;
-        }
-    }
-
-    /**
-     *
-     * @param statuTips
-     * @param color
-     */
-    public void showStatuTips(String statuTips,@ColorInt int color){
-        if (smileLoadingDialog!=null && !TextUtils.isEmpty(statuTips)){
-            smileLoadingDialog.setStatuTip(statuTips,color);
-        }
-
-    }
-
-    /**
-     *
-     * @return
-     */
-    public SmileLoadingDialog getSmileLoadingDialog() {
-        if (smileLoadingDialog == null){
-            throw new RuntimeException("you yet show smileLoading Dialog ! ");
-        }
-        return smileLoadingDialog;
-    }
 
 }

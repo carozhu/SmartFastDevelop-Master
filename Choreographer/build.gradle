@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+//apply plugin: 'com.jfrog.bintray'
+//apply plugin: 'com.github.dcendents.android-maven'
+//
+//ext {
+//    bintrayRepo = 'Choreographer'
+//    bintrayName = 'zachinio.choreographer'
+//    libraryName = 'Choreographer'
+//
+//    publishedGroupId = 'zachinio.choreographer'
+//    artifact = 'choreographer'
+//
+//    libraryDescription = 'A library to animte views'
+//
+//    siteUrl = 'https://github.com/ZachBublil/Choreographer'
+//    gitUrl = 'https://github.com/ZachBublil/Choreographer.git'
+//
+//    libraryVersion = '1.0.0'
+//
+//    developerId = 'zachbublil'
+//    developerName = 'Zach Bublil'
+//    developerEmail = 'zachbublil@gmail.com'
+//
+//    licenseName = 'MIT'
+//    licenseUrl = 'https://opensource.org/licenses/MIT'
+//    allLicenses = ["MIT"]
+//}
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
+}
+
+repositories {
+    mavenCentral()
+}
+
+//if (project.rootProject.file('local.properties').exists()) {
+//    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+//}
+
+

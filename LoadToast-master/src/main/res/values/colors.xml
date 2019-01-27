@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="color_accent">#FFFFFF</color>-->
+    <color name="color_success">#3CCD88</color>
+    <color name="color_error">#f44336</color>
+
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">@color/theme_red_color</color>
+
+    <color name="theme_color">@color/white</color>
+    <color name="theme_text_grey_color">#888888</color>
+    <color name="theme_text_color">#222222</color>
+    <color name="theme_red_color">@color/color_error</color>
+
+    <color name="colorGreen">#ff669900</color>
+    <color name="colorGray">#ccc</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="colorTranslate">#00FFFFFF</color>
+    <color name="translate">#00000000</color>
+    <color name="colorTranslate_s">#50000000</color>
+    <color name="hotdync_tag_bgcolor">#00000000</color>
+
+    <color name="date_bar_color">#424266</color>
+    <color name="dync_lable_color">#85C9FB</color>
+    <color name="dync_name_color">#222222</color>
+    <color name="dync_time_color">#A2A2A2</color>
+    <color name="dync_content_color">#303030</color>
+    <color name="cate_subtitle_calor">#B2B2B2</color>
+
+    <color name="add_habit_text_color">#50AA94</color>
+    <color name="remove_habit_text_color">@color/theme_red_color</color>
+
+    <color name="hit_failed_color">#999999</color>
+    <color name="hit_suc_color">#4395FF</color>
+    <color name="hit_holiday_color">@color/theme_red_color</color>
+
+    <color name="content_background">#f2f2f2</color>
+
+    <color name="windowBackground">#1C1C1C</color>
+    <color name="overlay">#AA1C1C1C</color>
+    <color name="divider">#333333</color>
+    <color name="textColorPrimary">#FFFFFB</color>
+    <color name="textColorPrimaryInverse">#1C1C1C</color>
+
+    <color name="background_my_material_light">@color/material_grey_50</color>
+    <color name="background_my_material_grey">#ededed</color>
+    <color name="pureWhite">#ffffff</color>
+    <color name="primary_text">#212121</color>
+    <color name="textHint">#88888888</color>
+    <color name="iconCover">#cc979797</color>
+    <color name="iconCoverDark">#cc393939</color>
+    <color name="default_dark">#dadada</color>
+
+
+    <!--336ABEE0-->
+    <color name="guide_bg_color">#6ABEE0</color>
+
+
+    <!--评价Dialog-->
+    <color name="starColor">#57a6f0</color>
+    <color name="noteDescriptionTextColor">#57a6f0</color>
+    <color name="titleTextColor">#D9141627</color>
+    <color name="descriptionTextColor">#80141627</color>
+    <color name="commentTextColor">#D9141627</color>
+
+    <!--更多-->
+    <color name="more_text_color">#FEFEFE</color>
+</resources>

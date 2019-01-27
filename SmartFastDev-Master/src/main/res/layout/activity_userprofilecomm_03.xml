@@ -1,0 +1,162 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/main.appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_behavior="com.carozhu.smartfastdevmaster.FlingBehavior">
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/main.collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_expanded_toolbar_height"
+            app:contentScrim="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@color/md_deep_purple_200" />
+
+            <FrameLayout
+                android:id="@+id/main.framelayout.title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="4dp">
+
+                <LinearLayout
+                    android:id="@+id/main.linearlayout.title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/profile_spacing_small">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="bottom|center_horizontal"
+                        android:text="carozhu"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/profile_textsize_xlarge" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/space_5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="粉丝：10" />
+
+                        <Space
+                            android:layout_width="@dimen/space_20dp"
+                            android:layout_height="@dimen/space_10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="关注：23" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/lorem"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <LinearLayout
+        android:id="@+id/toolbar_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_anchor="@id/main.collapsing">
+
+        <LinearLayout
+            android:id="@+id/status_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main.toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:title="">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <!--<Space-->
+                <!--android:layout_width="@dimen/image_final_width"-->
+                <!--android:layout_height="@dimen/image_final_width"-->
+                <!--/>-->
+                <FrameLayout
+                    android:layout_width="@dimen/profile_image_final_width"
+                    android:layout_height="@dimen/profile_image_final_width"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/camerabutton" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/main.textview.title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:text="carozhu"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/profile_textsize_large" />
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </LinearLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/profile_image_width"
+        android:layout_height="@dimen/profile_image_width"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="@dimen/profile_spacing_normal"
+        android:src="@drawable/ic_temp_avator"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="2dp"
+        app:finalHeight="@dimen/profile_image_final_width"
+        app:finalToolbarHeight="?attr/actionBarSize"
+        app:finalXPosition="@dimen/profile_spacing_small"
+        app:finalYPosition="@dimen/profile_spacing_small"
+        app:layout_behavior="com.carozhu.smartfastdevmaster.AvatarImageBehavior" />
+
+</android.support.design.widget.CoordinatorLayout>

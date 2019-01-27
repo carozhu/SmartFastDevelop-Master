@@ -9,6 +9,11 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+/**
+ * Author: carozhu
+ * Date  : On 2018/8/13
+ * Desc  :
+ */
 public class BaseView extends FrameLayout {
     public BaseView(@NonNull Context context) {
         super(context);

@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="StateButton">
-        <!--圆角半径-->
-        <attr name="corner_radius" format="dimension" />
-        <!--边框颜色-->
-        <attr name="border_color" format="color" />
-        <!--边框宽度-->
-        <attr name="border_stroke" format="dimension" />
-        <!--不可用时的颜色-->
-        <attr name="unable_color" format="color" />
-        <attr name="iconPadding" format="dimension"/>
-    </declare-styleable>
+
 
     <declare-styleable name="SmartToolbar">
         <!-- 标题栏背景 图片或颜色 -->
@@ -59,4 +49,41 @@
         <attr name="pet_iconShow" format="integer"/>
         <attr name="pet_iconHide" format="integer"/>
     </declare-styleable>
+
+
+    <declare-styleable name="CircleProgressView">
+        <attr name="cpv_progressNormalColor" format="color"/>
+        <attr name="cpv_progressReachColor" format="color"/>
+        <attr name="cpv_progressTextColor" format="color"/>
+        <attr name="cpv_progressTextSize" format="dimension"/>
+        <attr name="cpv_progressTextOffset" format="dimension"/>
+        <attr name="cpv_progressNormalSize" format="dimension"/>
+        <attr name="cpv_progressReachSize" format="dimension"/>
+        <attr name="cpv_radius" format="dimension"/>
+        <attr name="cpv_progressTextVisible" format="boolean"/>
+        <attr name="cpv_progressStartArc" format="integer"/>
+        <attr name="cpv_progressTextSkewX" format="dimension"/>
+        <attr name="cpv_progressTextPrefix" format="string"/>
+        <attr name="cpv_progressTextSuffix" format="string"/>
+        <attr name="cpv_innerBackgroundColor" format="color"/>
+        <attr name="cpv_progressStyle" format="enum">
+            <enum name="Normal" value="0"/>
+            <enum name="FillInner" value="1"/>
+            <enum name="FillInnerArc" value="2"/>
+        </attr>
+        <attr name="cpv_innerProgressColor" format="color"/>
+        <attr name="cpv_innerPadding" format="dimension"/>
+        <attr name="cpv_outerColor" format="color"/>
+        <attr name="cpv_outerSize" format="dimension"/>
+        <attr name="cpv_reachCapRound" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="progressLayout">
+        <attr name="emptyColor" format="color" />
+        <attr name="loadedColor" format="color" />
+        <attr name="maxProgress" format="integer" />
+        <attr name="autoProgress" format="boolean"/>
+        <attr name="cornerRadius" format="integer"/>
+    </declare-styleable>
+
 </resources>

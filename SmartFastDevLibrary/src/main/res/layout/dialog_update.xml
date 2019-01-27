@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:alpha="50"
+              android:orientation="vertical">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+        <com.gcssloop.widget.RCRelativeLayout
+                android:id="@+id/permission_unfullrepair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:gravity="center"
+                android:padding="0dp"
+                android:visibility="visible"
+                app:round_corner="8dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_update_app"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:text="检测到有新版本1.0.1 请升级体验"
+                        android:textColor="@color/theme_text_color"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:id="@+id/tv_update_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center|left"
+                        android:minHeight="50dp"
+                        android:text="1:功能测试测试测试"
+                        android:textColor="@color/theme_text_color"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        android:visibility="visible"/>
+
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp">
+
+
+                    <com.carozhu.fastdev.widget.progress.LabProgressLayout
+                            android:id="@+id/labProgressLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:visibility="gone"
+                            app:autoProgress="true"
+                            app:cornerRadius="10"
+                            app:emptyColor="@color/md_green_100"
+                            app:loadedColor="@color/md_green_500"
+                            app:maxProgress="100"/>
+
+
+                    <LinearLayout
+                            android:id="@+id/ll_btn_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                        <TextView
+                                android:id="@+id/tv_not_update"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginRight="50dp"
+                                android:background="@drawable/shape_comm_normal_btn"
+                                android:gravity="center"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="暂不升级"
+                                android:textColor="@color/theme_text_color"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:visibility="visible"/>
+
+                        <TextView
+                                android:id="@+id/tv_update_now"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="0dp"
+                                android:background="@drawable/shape_comm_light_btn"
+                                android:gravity="center"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:text="升级体验"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </com.gcssloop.widget.RCRelativeLayout>
+    </FrameLayout>
+
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+
+</LinearLayout>

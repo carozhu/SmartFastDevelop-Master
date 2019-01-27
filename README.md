@@ -54,6 +54,7 @@ NetWorkStateReceiver.getInstance().unRegisterReceiver();
 * [FragmentLiftCycle](https://github.com/ImportEffort/FragmentLiftCycle ) 
 * [MVPArms](https://github.com/JessYanCoding/MVPArms) 
 * [MVPArt](https://github.com/JessYanCoding/MVPArt) 
+* [sunfusheng]
 
 ## Link
 * https://google-developer-training.gitbooks.io/android-developer-advanced-course-concepts/content/unit-1-expand-the-user-experience/lesson-1-fragments/1-2-c-fragment-lifecycle-and-communications/1-2-c-fragment-lifecycle-and-communications.html

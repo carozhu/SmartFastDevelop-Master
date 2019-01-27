@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.carozhu.fastdev.widget.multview.BaseMultiStateView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/multiStateView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:msv_emptyView="@layout/msv_empty_error_layout"
+    app:msv_errorView="@layout/msv_empty_error_layout"
+    app:msv_loadingView="@layout/msv_loading_layout"
+    app:msv_viewState="loading">
+
+
+    <com.carozhu.fastdev.widget.refresh.BaseSwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.carozhu.fastdev.widget.rv.BaseRecyclereView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+    </com.carozhu.fastdev.widget.refresh.BaseSwipeRefreshLayout>
+
+
+</com.carozhu.fastdev.widget.multview.BaseMultiStateView>

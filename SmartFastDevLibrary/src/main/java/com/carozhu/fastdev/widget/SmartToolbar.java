@@ -14,12 +14,11 @@ import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.carozhu.fastdev.R;
-import com.carozhu.fastdev.base.BaseRootView;
+import com.carozhu.fastdev.base.BaseView;
 import com.carozhu.fastdev.helper.DisplayHelper;
 
 /**
@@ -30,7 +29,7 @@ import com.carozhu.fastdev.helper.DisplayHelper;
  * TODO 2 : 中间自定义View  右边自定义View
  * TODO 3 : 统一配置颜色大小背景默认
  */
-public class SmartToolbar extends BaseRootView {
+public class SmartToolbar extends BaseView {
     private ActionBar actionBar;
     private Toolbar toolbar;
     private TextView titleTv;
@@ -69,11 +68,11 @@ public class SmartToolbar extends BaseRootView {
         centerTitleColor = array.getColor(R.styleable.SmartToolbar_centerTitleColor, getResources().getColor(R.color.md_black_1000));
         centerTitleSize = array.getDimension(R.styleable.SmartToolbar_centerTitleSize, 16);
         centerTitleType = array.getInt(R.styleable.SmartToolbar_centerTitleType, CENTER_TEXT_TYPE_NORMAL);
-        navigationResId = array.getResourceId(R.styleable.SmartToolbar_navigationIcon, 0);//navigationResId R.drawable.ic_back_white_24dp
+        navigationResId = array.getResourceId(R.styleable.SmartToolbar_navigationIcon, 0);//navigationResId R.drawable.ic_back
     }
 
     private void initView() {
-        inflate(R.layout.view_smart_toolbar, this, true);
+        inflate(R.layout.smart_toolbar_view, this, true);
         toolbar = findViewById(R.id.toolbar);
         titleTv = findViewById(R.id.titleTv);
 

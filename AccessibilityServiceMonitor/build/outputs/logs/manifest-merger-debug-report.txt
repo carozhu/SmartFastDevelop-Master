@@ -1,0 +1,197 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:2:1-50:12
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0-beta01.aar/b97d78649040a7d9b32404b06a102d94/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] /Users/caro/.gradle/caches/transforms-1/files-1.1/constraintlayout-1.1.2.aar/b1b2c35f194a6f73e13f483ea0fa6a7a/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.fragment:fragment:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0-beta01.aar/44bb0e33d03b3c5957d8fc4997fc473b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0-beta01.aar/e997d7b978d88fd6e67f8ba363c6df39/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0-beta01.aar/381759e2d3f1a1894059a726d0fbf818/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0-beta01.aar/774be37d41e7a488994e6a2a59a2f1bb/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.0-beta01.aar/0bf48a691edddfc61edee1ab0a6c3483/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/loader-1.0.0-beta01.aar/ff8add54c1dc6d5ffadc0be104ca49f9/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0-beta01.aar/a95d91992fbe5fc1187d60403f22a56d/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0-beta01.aar/56b1318db97bdc88161775fdee594cee/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0-beta01.aar/11daf4aeb53b8b3949d4dd777bd62f98/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0-beta01.aar/165d382488e601db708da03233b33df1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/customview-1.0.0-beta01.aar/1df4b17870f51cb4c0aa387bfd1fe52f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0-beta01.aar/816a03c58ca0e4546eae3ac3e736ec4c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0-beta01.aar/58ada800eb695c9775ed80b4dadfff1f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/core-1.0.0-beta01.aar/44f572d739547d0f882c0cfc156629cf/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0-beta01.aar/e301568273fa2807851196c8f27d4274/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0-beta01.aar/cd9084d9e62517a31d4798eb09c217c8/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.documentfile:documentfile:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0-beta01.aar/9d38e612aeb50632f03899be37aba986/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0-beta01.aar/aeb4cfa12463b1bb9ab85c9b9d3ef8a1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/print-1.0.0-beta01.aar/91beaf0676f93437076d51fa4da5cc3e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0-beta01.aar/b6c29dd7a506a3a7c549299d977204a0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0-beta01.aar/c3155426aea119d2818c6d37fc0edccc/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0-beta01.aar/bb61cf3dab05ec4338aefaef8cf16425/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0-beta01.aar/f2c66456966b99b77b673440be15434b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0-beta01.aar/a959fb83e4da6909d5e5faaa46772023/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:2:1-50:12
+	package
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:3:5-33
+		INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+		INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:2:1-50:12
+		INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:2:1-50:12
+		INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:7:5-66
+	android:name
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:7:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:8:5-78
+	android:name
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:8:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:9:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:10:22-78
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:12:5-77
+	android:name
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:12:22-75
+application
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:14:5-48:19
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] /Users/caro/.gradle/caches/transforms-1/files-1.1/constraintlayout-1.1.2.aar/b1b2c35f194a6f73e13f483ea0fa6a7a/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] /Users/caro/.gradle/caches/transforms-1/files-1.1/constraintlayout-1.1.2.aar/b1b2c35f194a6f73e13f483ea0fa6a7a/AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/core-1.0.0-beta01.aar/44f572d739547d0f882c0cfc156629cf/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/core-1.0.0-beta01.aar/44f572d739547d0f882c0cfc156629cf/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0-beta01.aar/cd9084d9e62517a31d4798eb09c217c8/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0-beta01.aar/cd9084d9e62517a31d4798eb09c217c8/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/core-1.0.0-beta01.aar/44f572d739547d0f882c0cfc156629cf/AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:19:9-35
+	android:label
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:17:9-41
+	android:icon
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:16:9-43
+	android:allowBackup
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:15:9-35
+	android:theme
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:20:9-40
+	android:name
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:18:9-56
+activity#com.zsyj.videocall.MainActivity
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:21:9-28:20
+	android:theme
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:22:9-53
+	android:name
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:21:19-65
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:23:13-27:29
+action#android.intent.action.MAIN
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:26:27-74
+service#com.zsyj.videocall.service.AccessibilityServiceMonitor
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:30:9-47:19
+	android:enabled
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:32:13-35
+	android:label
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:34:13-45
+	android:exported
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:33:13-36
+	android:permission
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:35:13-79
+	android:name
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:31:13-82
+intent-filter#action:name:android.accessibilityservice.AccessibilityService
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:37:13-39:29
+action#android.accessibilityservice.AccessibilityService
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:38:17-92
+	android:name
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:38:25-89
+meta-data#android.accessibilityservice
+ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:41:13-45:25
+	android:resource
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:43:17-61
+	android:name
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml:42:17-60
+uses-sdk
+INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0-beta01.aar/b97d78649040a7d9b32404b06a102d94/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0-beta01.aar/b97d78649040a7d9b32404b06a102d94/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] /Users/caro/.gradle/caches/transforms-1/files-1.1/constraintlayout-1.1.2.aar/b1b2c35f194a6f73e13f483ea0fa6a7a/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] /Users/caro/.gradle/caches/transforms-1/files-1.1/constraintlayout-1.1.2.aar/b1b2c35f194a6f73e13f483ea0fa6a7a/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.fragment:fragment:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0-beta01.aar/44bb0e33d03b3c5957d8fc4997fc473b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0-beta01.aar/44bb0e33d03b3c5957d8fc4997fc473b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0-beta01.aar/e997d7b978d88fd6e67f8ba363c6df39/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0-beta01.aar/e997d7b978d88fd6e67f8ba363c6df39/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0-beta01.aar/381759e2d3f1a1894059a726d0fbf818/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0-beta01.aar/381759e2d3f1a1894059a726d0fbf818/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0-beta01.aar/774be37d41e7a488994e6a2a59a2f1bb/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0-beta01.aar/774be37d41e7a488994e6a2a59a2f1bb/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.0-beta01.aar/0bf48a691edddfc61edee1ab0a6c3483/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.0-beta01.aar/0bf48a691edddfc61edee1ab0a6c3483/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/loader-1.0.0-beta01.aar/ff8add54c1dc6d5ffadc0be104ca49f9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/loader-1.0.0-beta01.aar/ff8add54c1dc6d5ffadc0be104ca49f9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0-beta01.aar/a95d91992fbe5fc1187d60403f22a56d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0-beta01.aar/a95d91992fbe5fc1187d60403f22a56d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0-beta01.aar/56b1318db97bdc88161775fdee594cee/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0-beta01.aar/56b1318db97bdc88161775fdee594cee/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0-beta01.aar/11daf4aeb53b8b3949d4dd777bd62f98/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0-beta01.aar/11daf4aeb53b8b3949d4dd777bd62f98/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0-beta01.aar/165d382488e601db708da03233b33df1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0-beta01.aar/165d382488e601db708da03233b33df1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/customview-1.0.0-beta01.aar/1df4b17870f51cb4c0aa387bfd1fe52f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/customview-1.0.0-beta01.aar/1df4b17870f51cb4c0aa387bfd1fe52f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0-beta01.aar/816a03c58ca0e4546eae3ac3e736ec4c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0-beta01.aar/816a03c58ca0e4546eae3ac3e736ec4c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0-beta01.aar/58ada800eb695c9775ed80b4dadfff1f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0-beta01.aar/58ada800eb695c9775ed80b4dadfff1f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/core-1.0.0-beta01.aar/44f572d739547d0f882c0cfc156629cf/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/core-1.0.0-beta01.aar/44f572d739547d0f882c0cfc156629cf/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0-beta01.aar/e301568273fa2807851196c8f27d4274/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0-beta01.aar/e301568273fa2807851196c8f27d4274/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0-beta01.aar/cd9084d9e62517a31d4798eb09c217c8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0-beta01.aar/cd9084d9e62517a31d4798eb09c217c8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0-beta01.aar/9d38e612aeb50632f03899be37aba986/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0-beta01.aar/9d38e612aeb50632f03899be37aba986/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0-beta01.aar/aeb4cfa12463b1bb9ab85c9b9d3ef8a1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0-beta01.aar/aeb4cfa12463b1bb9ab85c9b9d3ef8a1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/print-1.0.0-beta01.aar/91beaf0676f93437076d51fa4da5cc3e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/print-1.0.0-beta01.aar/91beaf0676f93437076d51fa4da5cc3e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0-beta01.aar/b6c29dd7a506a3a7c549299d977204a0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0-beta01.aar/b6c29dd7a506a3a7c549299d977204a0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0-beta01.aar/c3155426aea119d2818c6d37fc0edccc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0-beta01.aar/c3155426aea119d2818c6d37fc0edccc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0-beta01.aar/bb61cf3dab05ec4338aefaef8cf16425/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0-beta01.aar/bb61cf3dab05ec4338aefaef8cf16425/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0-beta01.aar/f2c66456966b99b77b673440be15434b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0-beta01.aar/f2c66456966b99b77b673440be15434b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0-beta01.aar/a959fb83e4da6909d5e5faaa46772023/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0-beta01] /Users/caro/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0-beta01.aar/a959fb83e4da6909d5e5faaa46772023/AndroidManifest.xml:20:5-44
+INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+		INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+		ADDED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml
+		INJECTED from /Users/caro/android/SmartFastDev_Application/AccessibilityServiceMonitor/src/main/AndroidManifest.xml

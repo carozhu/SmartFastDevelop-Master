@@ -27,16 +27,11 @@ import java.util.Locale;
  * 参考来自 QMUIDisplayHelper
  */
 public class DisplayHelper {
-
+    private static final String TAG = DisplayHelper.class.getSimpleName();
     /**
      * 屏幕密度,系统源码注释不推荐使用
      */
     public static final float DENSITY = Resources.getSystem().getDisplayMetrics().density;
-    private static final String TAG = DisplayHelper.class.getSimpleName();
-    /**
-     * 是否有摄像头
-     */
-    private static Boolean sHasCamera = null;
 
     /**
      * 获取 DisplayMetrics
@@ -138,6 +133,9 @@ public class DisplayHelper {
 
     }
 
+    /**
+     * 检测设备是否有底部导航栏
+     */
     public static boolean isNavMenuExist(Context context) {
         //通过判断设备是否有返回键、菜单键(不是虚拟键,是手机屏幕外的按键)来确定是否有navigation bar
         boolean hasMenuKey = ViewConfiguration.get(context).hasPermanentMenuKey();
@@ -239,21 +237,10 @@ public class DisplayHelper {
      * @return
      */
     public static int getStatusBarHeight(Context context) {
-        Class<?> c;
-        Object obj;
-        Field field;
-        int x;
-        try {
-            c = Class.forName("com.android.internal.R$dimen");
-            obj = c.newInstance();
-            field = c.getField("status_bar_height");
-            x = Integer.parseInt(field.get(obj).toString());
-            return context.getResources()
-                    .getDimensionPixelSize(x);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return 0;
+        int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
+        int statuH =context.getResources().getDimensionPixelSize(resourceId);
+
+        return statuH;
     }
 
     /**

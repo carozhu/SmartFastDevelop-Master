@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="12dp">
+
+        <include layout="@layout/layout_example_card_1" />
+
+        <include layout="@layout/layout_example_card_2" />
+
+        <include layout="@layout/layout_example_card_3" />
+
+        <include layout="@layout/layout_example_card_4" />
+
+        <include layout="@layout/layout_example_card_5" />
+
+        <include layout="@layout/layout_example_card_6" />
+
+        <include layout="@layout/layout_example_card_7" />
+
+        <include layout="@layout/layout_example_card_8" />
+
+        <include layout="@layout/layout_example_card_9" />
+
+        <include layout="@layout/layout_example_card_10" />
+
+        <include layout="@layout/layout_example_card_11" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

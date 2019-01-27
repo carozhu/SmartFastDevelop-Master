@@ -263,7 +263,7 @@ public class DeviceHelper {
      */
     public static String getPhoneDUID(Context context) {
         String UUID = null;
-        UUID = SharedPreferencesHelper.getValuewithField(context, "DUID");
+        UUID = SharedPreferencesHelper.getValuewithField(context, "DUID",null);
         if (TextUtils.isEmpty(UUID)) {
             DeviceUUIDFactory deviceUUIDFactory = new DeviceUUIDFactory(context);
             UUID = deviceUUIDFactory.getDeviceUuid();

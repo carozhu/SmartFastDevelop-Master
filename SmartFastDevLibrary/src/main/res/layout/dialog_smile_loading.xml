@@ -19,7 +19,7 @@
         android:paddingBottom="6dp"
         android:layout_height="wrap_content">
 
-        <com.carozhu.fastdev.dialog.LVCircularSmile
+        <com.carozhu.fastdev.widget.LVCircularSmile
             android:id="@+id/lv_circularSmile"
             android:padding="5dp"
             android:layout_width="60dp"

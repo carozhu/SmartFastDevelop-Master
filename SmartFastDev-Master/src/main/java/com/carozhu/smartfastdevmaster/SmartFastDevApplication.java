@@ -10,7 +10,7 @@ public class SmartFastDevApplication extends BaseApplication {
         //Net Init
         RetrofitOkhttpClient.init(this);
         RetrofitOkhttpClient.getInstance()
-                .setBaseUrl("http://cc-test.zsyj.com.cn")
+                .setBaseUrl("http://cc-test.fadi.com.cn")
                 .configJacksonConverterFactory()
                 .addLogInterceptor(true,"1.0");
 

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name = "Dashedline">
+        <attr name = "lineColor" format= "color" />
+        <attr name = "lineWidth" format= "float"/>
+    </declare-styleable >
+
+    <declare-styleable name="RoundImageView">
+        <attr name="type" format="enum">
+            <enum name="circle" value="1" />
+            <enum name="round" value="2" />
+        </attr>
+        <attr name="radius" format="dimension" />ssss
+    </declare-styleable>
+
+    <declare-styleable name="scene">
+        <attr name="leftMargin" format="dimension" />
+        <attr name="leftDistance" format="dimension" />
+        <attr name="rightDistance" format="dimension" />
+        <attr name="verticalDistance" format="dimension" />
+        <attr name="textSize" format="float" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="AvatarImageBehavior">
+        <attr name="finalXPosition" format="dimension"/>
+        <attr name="finalYPosition" format="dimension"/>
+        <attr name="finalHeight" format="dimension"/>
+        <attr name="finalToolbarHeight" format="dimension"/>
+    </declare-styleable>
+
+    <!--<declare-styleable name="AvatarImageBehavior">-->
+        <!--<attr name="finalYPosition" format="dimension" />-->
+        <!--<attr name="startXPosition" format="dimension" />-->
+        <!--<attr name="startToolbarPosition" format="dimension" />-->
+        <!--<attr name="startHeight" format="dimension" />-->
+        <!--<attr name="finalHeight" format="dimension" />-->
+    <!--</declare-styleable>-->
+
+    <declare-styleable name="StickyScrollView">
+        <attr name="stuckShadowHeight" format="dimension" />
+        <attr name="stuckShadowDrawable" format="reference" />
+    </declare-styleable>
+
+</resources>

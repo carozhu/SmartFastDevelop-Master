@@ -22,8 +22,6 @@ import java.text.DecimalFormat;
  * 文件帮助类
  */
 public class FileUtil {
-    public static final int BUFSIZE = 256;
-    public static final int COUNT = 320;
     private static final String TAG = "FileUtils";
     private static final long SIZE_KB = 1024;
     private static final long SIZE_MB = 1048576;
@@ -262,12 +260,32 @@ public class FileUtil {
      *
      * @return
      */
-    public static String getExtPath() {
-        String path = "";
-        if (isSDCardReady()) {
-            path = Environment.getExternalStorageDirectory().getPath();
+    public static String getSDCARDPath() {
+        try {
+            if (isSDCardReady()) {
+                String path = Environment.getExternalStorageDirectory().getPath();
+                return path;
+            }
+
+            File path = Environment.getExternalStorageDirectory().getParentFile();
+            if (path.isDirectory()) {
+                File[] files = path.listFiles();
+                for (int i = 0; i < files.length; i++) {
+                    if (files[i].isDirectory()) {
+                        if (StringUtil.containsAny(files[i].getPath(), "sdcard")) {
+                            if (files[i].list().length > 0) {
+                                return files[i].getPath();
+                            } else {
+                            }
+                        }
+                    }
+                }
+
+            }
+        } catch (Exception e) {
         }
-        return path;
+
+        return "/mnt/sdcard";
     }
 
     /**

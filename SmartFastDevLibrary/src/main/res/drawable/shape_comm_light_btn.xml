@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <gradient android:angle="0" android:endColor="#ff59a5fd" android:startColor="#ffa04df7" />
+            <!--<stroke android:width="2dp" android:color="#dcdcdc" />-->
+            <corners android:radius="30dp" />
+        </shape>
+    </item>
+
+    <item android:state_focused="true">
+        <shape>
+            <gradient android:angle="0" android:endColor="#ff59a5fd" android:startColor="#ffa04df7" />
+            <!--<stroke android:width="2dp" android:color="#dcdcdc" />-->
+            <corners android:radius="30dp" />
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <gradient android:angle="0" android:endColor="#ff59a5fd" android:startColor="#ffa04df7" />
+            <!--<stroke android:width="2dp" android:color="#fad3cf" />-->
+            <corners android:radius="30dp" />
+        </shape>
+    </item>
+</selector>
+
+<!--可以通过设置 angle 来自定义渐变方向，它是从左向右、逆时针转的 参考：https://www.jianshu.com/p/f67d8610fcda-->
