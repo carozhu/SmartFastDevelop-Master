@@ -12,13 +12,13 @@ public class RomHelper {
 
     private static final String TAG = "Rom";
 
-    public static final String ROM_MIUI = "MIUI";
-    public static final String ROM_EMUI = "EMUI";
-    public static final String ROM_FLYME = "FLYME";
-    public static final String ROM_OPPO = "OPPO";
-    public static final String ROM_SMARTISAN = "SMARTISAN";
-    public static final String ROM_VIVO = "VIVO";
-    public static final String ROM_QIKU = "QIKU";
+    public static final String ROM_MIUI = "MIUI";// 小米
+    public static final String ROM_EMUI = "EMUI";// 华为
+    public static final String ROM_FLYME = "FLYME";// 魅族
+    public static final String ROM_OPPO = "OPPO";// OPPO
+    public static final String ROM_SMARTISAN = "SMARTISAN";// 锤子
+    public static final String ROM_VIVO = "VIVO";// vivo
+    public static final String ROM_QIKU = "QIKU";// 奇酷360
 
     private static final String KEY_VERSION_MIUI = "ro.miui.ui.version.name";
     private static final String KEY_VERSION_EMUI = "ro.build.version.emui";

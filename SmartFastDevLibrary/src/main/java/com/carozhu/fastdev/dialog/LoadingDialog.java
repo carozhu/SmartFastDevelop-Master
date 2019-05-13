@@ -72,7 +72,7 @@ public class LoadingDialog extends Dialog {
 
     private void show(LoadingDialog mLoadingDialog){
         //提示语
-        if (TextUtils.isEmpty(mLoadingDialog.tips)){
+        if (!TextUtils.isEmpty(mLoadingDialog.tips)){
             mLoadingDialog.tipsTV.setText(tips);
             mLoadingDialog.tipsTV.setVisibility(View.VISIBLE);
         }else {

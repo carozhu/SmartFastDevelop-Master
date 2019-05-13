@@ -11,14 +11,11 @@ import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Environment;
 import android.support.annotation.RequiresApi;
+import android.support.v4.content.ContextCompat;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
-import android.view.Display;
-import android.view.KeyCharacterMap;
-import android.view.KeyEvent;
-import android.view.ViewConfiguration;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.*;
+import android.widget.LinearLayout;
 
 import java.lang.reflect.Field;
 import java.util.Locale;
@@ -341,6 +338,7 @@ public class DisplayHelper {
      */
     public static boolean isFullScreen(Activity activity) {
         WindowManager.LayoutParams params = activity.getWindow().getAttributes();
+
         return (params.flags & WindowManager.LayoutParams.FLAG_FULLSCREEN) == WindowManager.LayoutParams.FLAG_FULLSCREEN;
     }
 
@@ -348,4 +346,17 @@ public class DisplayHelper {
     public static boolean isElevationSupported() {
         return Build.VERSION.SDK_INT >= 21;
     }
+
+    /**
+     * statusVarView Height 沉侵样式设置
+     * @param statusView
+     * @param color
+     */
+    public static void setStatusViewBar(Context context,View statusView, int color){
+        // 获得状态栏高度
+        int statuH = DisplayHelper.getStatusBarHeight(context);
+        statusView.setBackgroundColor(ContextCompat.getColor(context,color));
+        statusView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, statuH));
+    }
+
 }

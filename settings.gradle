@@ -1,4 +1,4 @@
-include ':SmartFastDev-Master'
+//include ':SmartFastDev-Master'
 include ':SmartFastDevLibrary'
 
 //个人页滑动布局效果
@@ -37,4 +37,4 @@ include ':SmartFastDevLibrary'
 
 //include ':fluid-slider-example-simple', ':fluid-slider', ':fluid-slider-example-simple-java'
 
-include ':LabProgress-master','LabProgress'
+//include ':LabProgress-master','LabProgress'

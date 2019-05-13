@@ -1,5 +1,8 @@
 package com.carozhu.fastdev.utils;
 
+
+
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
@@ -16,7 +19,7 @@ import java.util.List;
 public class AppInfoUtil {
 	/**
 	 * Get the App's PackageName
-	 * 
+	 *
 	 * @return the App's PackageName
 	 */
 
@@ -27,7 +30,7 @@ public class AppInfoUtil {
 
 	/**
 	 * Get The App VersionCode
-	 * 
+	 *
 	 * @param context
 	 * @return the App VersionCode
 	 */
@@ -45,7 +48,7 @@ public class AppInfoUtil {
 
 	/**
 	 * Get The App VersionName
-	 * 
+	 *
 	 * @param context
 	 * @return the App VersionName
 	 */
@@ -59,24 +62,50 @@ public class AppInfoUtil {
 
 		}
 		return verName;
-
 	}
 
 	/**
+	 * 获取当前应用程序的包名
+	 * @param context 上下文对象
+	 * @return 返回包名
+	 */
+	public static String getAppProcessName(Context context) {
+		//当前应用pid
+		int pid = android.os.Process.myPid();
+		//任务管理类
+		ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+		//遍历所有应用
+		List<ActivityManager.RunningAppProcessInfo> infos = manager.getRunningAppProcesses();
+		for (ActivityManager.RunningAppProcessInfo info : infos) {
+			if (info.pid == pid)//得到当前应用
+				return info.processName;//返回包名
+		}
+		return "";
+	}
+	/**
 	 * Get The AppName
-	 * 
+	 *
 	 * @param context
 	 * @return the AppName
 	 */
-
 	public static String getAppName(Context context) {
-		String verName = context.getResources().getText(context.getResources().getIdentifier("app_name", "string", context.getPackageName())).toString();
-		return verName;
+		//包管理操作管理类
+		PackageManager pm = context.getPackageManager();
+		try {
+			ApplicationInfo info = pm.getApplicationInfo(getAppProcessName(context), 0);
+			return info.loadLabel(pm).toString();
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+		}
+		return "";
 	}
+
 
 	/**
 	 * Get The AppIcon
-	 * 
+	 *
 	 * @param context
 	 * @return the AppIcon
 	 */
@@ -95,7 +124,7 @@ public class AppInfoUtil {
 
 	/**
 	 * Get The App FirstInstallTime(requires API level 9)
-	 * 
+	 *
 	 * @param context
 	 * @return the App FirstInstallTime
 	 */
@@ -114,7 +143,7 @@ public class AppInfoUtil {
 
 	/**
 	 * Get The App LastUpdateTime(requires API level 9)
-	 * 
+	 *
 	 * @param context
 	 * @return the App LastUpdateTime
 	 */
@@ -133,7 +162,7 @@ public class AppInfoUtil {
 
 	/**
 	 * Get the App's All use Permission
-	 * 
+	 *
 	 * @param packageName
 	 * @return the use Permissions by ArrayList<MyPermission> permissions
 	 */
@@ -159,7 +188,7 @@ public class AppInfoUtil {
 						packageManager).toString());
 				System.out.println("permissionGroup="
 						+ permissionGroupInfo.loadLabel(packageManager)
-								.toString());
+						.toString());
 				String permissionLabel = permissionInfo.loadLabel(
 						packageManager).toString();
 				permi.setPermissionLabel(permissionLabel);
@@ -182,7 +211,7 @@ public class AppInfoUtil {
 
 	/**
 	 * Get the Device's ALL Third Apps
-	 * 
+	 *
 	 * @return the Device's ALL Third Apps
 	 */
 
